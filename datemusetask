@@ -17,11 +17,18 @@ import streamlit as st
 keyword=text_input('Please, insert a keyword ')
 option = st.selectbox("Choose one",("synonym", "antonyms", "sounds like", "means like")
 
+if option = "synonym":
+ key ="rel_syn"
+elif option = "antonyms":
+ key = "rel_ant"
+elif option = "sounds like":
+ key = "sl"
+elif option = "means like":
+ key = "ml"
+ 
+ url= 'https://api.datamuse.com/words?' + key + keyword
+
 st.write("You selected", option)
-
-#url= 'https://api.datamuse.com/words?rel_syn=' + keyword
-url= 'https://api.datamuse.com/words?rel_ant=' + keyword
-
 
 
 #Step3: Download the JSON data from the API.
