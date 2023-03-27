@@ -1,4 +1,5 @@
 import json, requests 
+import streanlit as st
 
 #add your own APIkey
 APIkey = "b0dc5ff479faf43dff849169f51ad2b0"
@@ -23,4 +24,5 @@ weatherData = json.loads(response.text)
 #from pprint import pprint 
 #pprint(weatherData) 
 
-print(weatherData['main']['temp_max'])
+st.header("Weather forecast")
+st.write("Temperature:", weatherData['main']['temp_max'])
