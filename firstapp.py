@@ -1,5 +1,5 @@
 import json, requests 
-import streanlit as st
+import streamlit as st
 
 #add your own APIkey
 APIkey = "b0dc5ff479faf43dff849169f51ad2b0"
