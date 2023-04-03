@@ -29,7 +29,7 @@ if option:
   key = "ml"
   
  if(key and keyword):
- url= 'https://api.datamuse.com/words?' + key + "=" + keyword
+  url= 'https://api.datamuse.com/words?' + key + "=" + keyword
 
 
 
