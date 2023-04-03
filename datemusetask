@@ -41,6 +41,7 @@ st.write("You selected", option)
 
 #Step4: Load JSON data into a Python variable and use it in your program.
  dataFromDatamuse = json.loads(response.text) 
+ st.write(responseData)
 #Uncomment to see the raw JSON text loaded in a Python Variable:
 #print(dataFromDatamuse) 
 #Uncomment to see a better readable version:
