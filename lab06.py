@@ -4,7 +4,7 @@ import IPython.display as ipd
 from googletrans import Translator
 
 translator = Translator()
-word_user=st.texct_input('Give some text:')
+word_user=st.text_input('Give some text:')
 
 languageis = translator.translate(word_user, dest='de')
 
