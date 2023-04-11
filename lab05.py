@@ -1,5 +1,5 @@
 import json, requests
-from googletrans import Transloator
+from googletrans import Translator
 import streamlit as st
 
 language = st.selectbox('Please, select destination language')
