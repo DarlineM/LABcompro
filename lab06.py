@@ -2,6 +2,7 @@
 from gtts import gTTS
 import IPython.display as ipd  
 from googletrans import Translator
+import streamlit as st
 
 translator = Translator()
 word_user=st.text_input('Give some text:')
