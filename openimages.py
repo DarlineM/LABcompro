@@ -30,11 +30,11 @@ elif option == "It means like":
 elif option == "It rhymes with":
   key = "rhy"
   
-  if(key and keyword):
-    url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
-    response = requests.get(url)
-    dataFromDatamuse = json.loads(response.text) 
-    st.write(datafromDatamuse)
+if(key and keyword):
+  url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
+  response = requests.get(url)
+  dataFromDatamuse = json.loads(response.text) 
+  st.write(datafromDatamuse)
         
 
       
