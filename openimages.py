@@ -23,11 +23,11 @@ option = st.selectbox("Choose one",("It is another word for", "It sounds like",
 if option:
   if option == "It is another word for":
     key ="rel_syn"
-  elif option == "It sounds like":
+  if option == "It sounds like":
     key = "sl"
-  elif option == "It means like":
+  if option == "It means like":
     key = "ml"
-  elif option == "It rhymes with":
+  if option == "It rhymes with":
     key = "rhy"
       
   if(key and keyword):
