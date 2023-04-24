@@ -1,8 +1,9 @@
 import json,requests
 import random
 import streamlit as st
-!pip install bing-image-downloader
-from bing_image_downloader import downloader
+#!pip install bing-image-downloader
+#from bing_image_downloader import downloader
+from PIL import Image
 
 st.start_button(label='START')
 #oder?
@@ -12,7 +13,13 @@ items = ['to eat', 'to read', 'summer', 'winter', 'tree', 'head', 'ear', 'apple'
 
 rand_item = random.choice(items)
 
-downloader.download(rand_item, limit=1,  output_dir='dataset', adult_filter_off=True, force_replace=False, timeout=60, verbose=True)
+picture = rand_item + '.jpg'
+
+img = Image.open(picture)
+
+st.image(img)
+
+#downloader.download(rand_item, limit=1,  output_dir='dataset', adult_filter_off=True, force_replace=False, timeout=60, verbose=True)
 
 keyword = rand_item
 option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
