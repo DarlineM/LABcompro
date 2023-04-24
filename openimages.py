@@ -16,25 +16,32 @@ st.button(label='START', key = "<uniquevalueofsomesort>")
 picture = rand_item + '.jpg'
 img = Image.open(picture)
 st.image(img)
+
+if st.button(label='HELP1'):
+  keyword = rand_item
+  key = "rel_syn"
+  url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
+  response = requests.get(url)
+  dataFromDatamuse = json.loads(response.text) 
+  st.write(dataFromDatamuse)
   
-keyword = rand_item
-option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
+  #option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
                                     "It means like", "It rhymes with"))
-if option:
-  if option == "It is another word for":
-    key ="rel_syn"
-  if option == "It sounds like":
-    key = "sl"
-  if option == "It means like":
-    key = "ml"
-  if option == "It rhymes with":
-    key = "rhy"
+#if option:
+ # elif option == "It is another word for":
+  #  key ="rel_syn"
+ # elif option == "It sounds like":
+   # key = "sl"
+ # elif option == "It means like":
+  #  key = "ml"
+ # elif option == "It rhymes with":
+   # key = "rhy"
       
-  if(key and keyword):
-    url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
-    response = requests.get(url)
-    dataFromDatamuse = json.loads(response.text) 
-    st.write(dataFromDatamuse)
+#  if(key and keyword):
+ #   url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
+ #   response = requests.get(url)
+  #  dataFromDatamuse = json.loads(response.text) 
+  #  st.write(dataFromDatamuse)
         
 
       
