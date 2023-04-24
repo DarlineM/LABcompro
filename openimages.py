@@ -37,7 +37,9 @@ while (counter <= 1):
         response = requests.get(url)
         dataFromDatamuse = json.loads(response.text) 
         st.write(dataFromDatamuse)
+        
+        counter = counter + 1
   else:
     pass
       
-        counter = counter + 1
+        
