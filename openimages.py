@@ -6,7 +6,7 @@ import random
 
 #st.image(img)
 
-items = ['to eat', 'to read', 'summer', 'winter', 'tree', 'head', 'ear', 'apple']
+items = ['to eat', 'to read', 'tree', 'apple']
 
 rand_item = random.choice(items)
 
