@@ -25,7 +25,7 @@ if st.button(label='START', key = "<uniquevalueofsomesort>"):
   if option:
     if option == "It is another word for":
       key ="rel_syn"
-    elif option == "It sounds like"
+    elif option == "It sounds like":
       key = "sl"
     elif option == "It means like":
       key = "ml"
