@@ -15,27 +15,27 @@ while (counter <= 1):
   if st.button(label='START'):
   #items = ['to_eat', 'to_read', 'tree', 'apple']
   #rand_item = random.choice(items)
-  picture = rand_item + '.jpg'
-  img = Image.open(picture)
-  st.image(img)
+    picture = rand_item + '.jpg'
+    img = Image.open(picture)
+    st.image(img)
   
-  keyword = rand_item
-  option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
+    keyword = rand_item
+    option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
                                     "It means like", "It rhymes with"))
-  if option:
-    if option == "It is another word for":
-      key ="rel_syn"
-    elif option == "It sounds like":
-      key = "sl"
-    elif option == "It means like":
-      key = "ml"
-    elif option == "It rhymes with":
-      key = "rhy"
+    if option:
+      if option == "It is another word for":
+        key ="rel_syn"
+      elif option == "It sounds like":
+        key = "sl"
+      elif option == "It means like":
+        key = "ml"
+      elif option == "It rhymes with":
+        key = "rhy"
       
-    if(key and keyword):
-      url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
-      response = requests.get(url)
-      dataFromDatamuse = json.loads(response.text) 
-      st.write(dataFromDatamuse)
+      if(key and keyword):
+        url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
+        response = requests.get(url)
+        dataFromDatamuse = json.loads(response.text) 
+        st.write(dataFromDatamuse)
       
-      counter = counter + 1
+        counter = counter + 1
