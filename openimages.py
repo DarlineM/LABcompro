@@ -12,7 +12,8 @@ if st.button(label='START'):
   picture = rand_item + '.jpg'
   img = Image.open(picture)
   st.image(img)
-  keyword = rand_itemoption = st.selectbox("Choose one",("It is another word for", "It sounds like", 
+  keyword = rand_item
+  option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
                                     "It means like", "It rhymes with"))
   if option:
     if option == "It is another word for":
