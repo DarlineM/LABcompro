@@ -23,7 +23,7 @@ if st.button(label='HELP1'):
   url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
   response = requests.get(url)
   dataFromDatamuse = json.loads(response.text) 
-  st.write(dataFromDatamuse)
+  st.write("It's another word for"dataFromDatamuse)
   
   #option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
                      #               "It means like", "It rhymes with"))
