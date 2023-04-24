@@ -26,7 +26,7 @@ if st.button(label='START'):
       key = "rhy"
       
  if(key and keyword):
-   url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
-   response = requests.get(url)
-   dataFromDatamuse = json.loads(response.text) 
-   st.write(datafromDatamuse)
+  url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
+  response = requests.get(url)
+  dataFromDatamuse = json.loads(response.text) 
+  st.write(datafromDatamuse)
