@@ -33,4 +33,4 @@ if option:
     url= 'https://api.datamuse.com/words?' + key + "=" + keyword 
     response = requests.get(url)
     dataFromDatamuse = json.loads(response.text) 
-    st.write(datafromDatamuse)
+    st.write(dataFromDatamuse)
