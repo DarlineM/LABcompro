@@ -21,13 +21,13 @@ keyword = rand_item
 option = st.multiselect("Choose one",["It is another word for", "It sounds like", 
                                     "It means like", "It rhymes with"])
 
- if option == "It is another word for":
+if option == "It is another word for":
   key ="rel_syn"
- elif option == "It sounds like":
+elif option == "It sounds like":
   key = "sl"
- elif option == "It means like":
+elif option == "It means like":
   key = "ml"
- elif option == "It rhymes with":
+elif option == "It rhymes with":
   key = "rhy"
   
  if(key and keyword):
