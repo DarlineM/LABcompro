@@ -7,12 +7,11 @@ import random
 
 #st.image(img)
 
-counter = 1
-while (counter <= 1):
+
   items = ['to_eat', 'to_read', 'tree', 'apple']
   rand_item = random.choice(items)
   
-if st.button(label='START', key = "<uniquevalueofsomesort>"):
+  st.button(label='START', key = "<uniquevalueofsomesort>"):
   #items = ['to_eat', 'to_read', 'tree', 'apple']
   #rand_item = random.choice(items)
   picture = rand_item + '.jpg'
@@ -38,7 +37,7 @@ if st.button(label='START', key = "<uniquevalueofsomesort>"):
       dataFromDatamuse = json.loads(response.text) 
       st.write(dataFromDatamuse)
         
-      counter = counter + 1
+      
   else:
     pass
       
