@@ -5,15 +5,18 @@ import random
 #img = Image.open('apple.jpg')
 
 #st.image(img)
+items = ['to_eat', 'to_read', 'tree', 'apple']
+rand_item = random.choice(items)
 
 if st.button(label='START'):
-  items = ['to_eat', 'to_read', 'tree', 'apple']
-  rand_item = random.choice(items)
+  #items = ['to_eat', 'to_read', 'tree', 'apple']
+  #rand_item = random.choice(items)
   picture = rand_item + '.jpg'
   img = Image.open(picture)
   st.image(img)
-  keyword = rand_item
-  option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
+  
+keyword = rand_item
+option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
                                     "It means like", "It rhymes with"))
   if option:
     if option == "It is another word for":
