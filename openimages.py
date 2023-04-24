@@ -26,7 +26,7 @@ if st.button(label='HELP1'):
   st.write(dataFromDatamuse)
   
   #option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
-                                    "It means like", "It rhymes with"))
+                     #               "It means like", "It rhymes with"))
 #if option:
  # elif option == "It is another word for":
   #  key ="rel_syn"
