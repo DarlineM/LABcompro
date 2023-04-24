@@ -12,7 +12,7 @@ while (counter <= 1):
   items = ['to_eat', 'to_read', 'tree', 'apple']
   rand_item = random.choice(items)
   
-  if st.button(label='START'):
+  if st.button(label='START', key = "<uniquevalueofsomesort>"):
   #items = ['to_eat', 'to_read', 'tree', 'apple']
   #rand_item = random.choice(items)
     picture = rand_item + '.jpg'
