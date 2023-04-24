@@ -36,7 +36,6 @@ if option:
     dataFromDatamuse = json.loads(response.text) 
     st.write(dataFromDatamuse)
         
- else:
-  pass
+
       
         
