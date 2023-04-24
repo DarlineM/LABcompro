@@ -18,7 +18,7 @@ if st.button(label='START'):
 keyword = rand_item
 option = st.selectbox("Choose one",("It is another word for", "It sounds like", 
                                     "It means like", "It rhymes with"))
-  if option:
+ if option:
     if option == "It is another word for":
       key ="rel_syn"
     elif option == "It sounds like":
