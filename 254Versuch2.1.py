@@ -21,10 +21,10 @@ if st.button(label='START'):
   st.image(img, width=300)
   st.subheader("You already know the word?")
 
-user_input = st.text_input("Enter the word")
+  user_input = st.text_input("Enter the word")
 
-if user_input.lower() == str(rand_item):
-    st.write("You entered the correct word!")
+  if user_input.lower() == str(rand_item):
+      st.write("You entered the correct word!")
 #elif user_input.lower() != str(rand_item):
     #st.write("Incorrect word. Please try again or get a hint.")
 
