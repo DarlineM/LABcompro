@@ -28,7 +28,14 @@ key_dict = {"It is another word for": "rel_syn",
 "It rhymes with": "rel_rhy"}
 
 if option:
-  key = key_dict[option[0]]
+ if option == "It is another word for":
+  key ="rel_syn"
+ elif option == "It sounds like":
+  key = "sl"
+ elif option == "It means like":
+  key = "ml"
+ elif option == "It rhymes with":
+  key = "rhy"
 
 if(key and keyword):
   url= 'https://api.datamuse.com/words?' + key + "=" + keyword
