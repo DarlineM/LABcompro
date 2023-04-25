@@ -48,10 +48,10 @@ if option:
     st.write("\n")
     st.write("\n")
     user_input2 = st.text_input("Try again now! Enter the word")
-     if user_input2.lower() == str(rand_item):
-        st.subheader("Super! Now you entered the correct word!")
+    if user_input2.lower() == str(rand_item):
+      st.subheader("Super! Now you entered the correct word!")
           #counter += 1
-        st.write("\n")
-        st.write("\n")
-        st.header("If you want to continue practicing, press the START button above again")
-        break 
+      st.write("\n")
+      st.write("\n")
+      st.header("If you want to continue practicing, press the START button above again")
+      break 
