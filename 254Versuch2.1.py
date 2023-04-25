@@ -14,6 +14,7 @@ items = ['to_eat', 'to_read', 'tree', 'apple']
 rand_item = items[counter]
                 
 if st.button(label='START'):
+  st.header("What do you see on this picture?")
   counter += 1
   picture = "images/" + rand_item + '.jpg'
   img = Image.open(picture)
