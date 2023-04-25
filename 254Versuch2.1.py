@@ -52,8 +52,4 @@ if option:
           #counter += 1
         st.write("\n")
         st.write("\n")
-        if st.button(label="Next exercise"):
-          counter += 1
-        else:
-          st.write("Test")
-        #st.header("If you want to continue practicing, press the START button above again")
+        st.header("If you want to continue practicing, press the START button above again")
