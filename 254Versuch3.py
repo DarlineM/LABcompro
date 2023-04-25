@@ -54,4 +54,5 @@ if option:
       st.write("\n")
       st.write("\n")
       st.header("If you want to continue practicing, press the START button above again")
-break 
+      
+  break 
