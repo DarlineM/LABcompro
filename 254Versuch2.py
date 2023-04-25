@@ -16,8 +16,8 @@ user_input = st.text_input("Enter the word")
 
 if user_input.lower() == str(rand_item):
     st.write("You entered the correct word!")
-elif user_input.lower() != str(rand_item):
-    st.write("Incorrect word. Please try again or get a hint.")
+#elif user_input.lower() != str(rand_item):
+    #st.write("Incorrect word. Please try again or get a hint.")
 
 st.write("\n")
 st.write("\n")
