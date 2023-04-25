@@ -8,9 +8,10 @@ items = ['to_eat', 'to_read', 'tree', 'apple']
 rand_item = items[counter]
                 
 if st.button(label='START'):
-    picture = "images/" + rand_item + '.jpg'
-    img = Image.open(picture)
-    st.image(img, width=300)
+  counter += 1
+  picture = "images/" + rand_item + '.jpg'
+  img = Image.open(picture)
+  st.image(img, width=300)
 
 user_input = st.text_input("Enter the word")
 
@@ -39,7 +40,7 @@ if option:
     user_input2 = st.text_input("Try again now! Enter the word")
     if user_input2.lower() == str(rand_item):
         st.write("Super! Now you entered the correct word!")
-        counter += 1
+        #counter += 1
         st.write("\n")
         st.write("\n")
         st.write("START again")
