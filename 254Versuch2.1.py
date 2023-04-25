@@ -15,7 +15,7 @@ rand_item = items[counter]
                 
 if st.button(label='START'):
   st.header("What do you see on this picture?")
-  counter += 1
+  #counter += 1
   picture = "images/" + rand_item + '.jpg'
   img = Image.open(picture)
   st.image(img, width=300)
@@ -52,4 +52,8 @@ if option:
           #counter += 1
         st.write("\n")
         st.write("\n")
-        st.header("If you want to continue practicing, press the START button above again")
+        if st.button(label="Next exercise"):
+          counter += 1
+        else:
+          st.write("Test")
+        #st.header("If you want to continue practicing, press the START button above again")
