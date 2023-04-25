@@ -16,7 +16,7 @@ st.image(img, width = 300)
 st.write("\n")
 st.write("\n")
 
-option = st.multiselect("Choose one",["It is another word for", "It sounds like",
+option = st.selectbox("Choose one",["It is another word for", "It sounds like",
 "Similar in meaning to", "It rhymes with"])
 
 if option == []:
