@@ -32,7 +32,7 @@ if option:
     url = 'https://api.datamuse.com/words?' + key + "=" + keyword
     response = requests.get(url)
     dataFromDatamuse = json.loads(response.text)
-    st.write(dataFromDatamuse[0])
+    st.write(dataFromDatamuse[0]["word"])
     
     st.write("\n")
     st.write("\n")
