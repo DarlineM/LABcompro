@@ -13,11 +13,11 @@ if st.button(label='START'):
     st.image(img, width=300)
 
 
-if user_input = st.text_input("Enter the word"):
-    if user_input.lower() == str(rand_item):
-        st.write("You entered the correct word!")
-    else:
-        st.write("Incorrect word. Please try again or get a hint.")
+user_input = st.text_input("Enter the word")
+if user_input.lower() == str(rand_item):
+    st.write("You entered the correct word!")
+else:
+    st.write("Incorrect word. Please try again or get a hint.")
 
 st.write("\n")
 st.write("\n")
