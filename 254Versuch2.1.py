@@ -53,4 +53,4 @@ if option:
         #counter += 1
         st.write("\n")
         st.write("\n")
-        st.header("START again")
+        st.header("If you want to continue practicing, press the START button above again")
