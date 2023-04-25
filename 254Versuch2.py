@@ -13,13 +13,13 @@ st.image(img, width = 300)
 
 st.write("\n")
 st.write("\n")
-option = st.multiselect("Choose one", ["It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
+option = st.selectbox("Choose one", ["It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
 
 if option:
   key_dict = {"It is another word for": "rel_syn", "It sounds like": "sl", "Similar in meaning to": "ml", "It rhymes with": "rel_rhy"}
   key = key_dict[option] if option in key_dict else None
 
-if key:
+  if key:
     keyword = rand_item
     url = 'https://api.datamuse.com/words?' + key + "=" + keyword
     response = requests.get(url)
