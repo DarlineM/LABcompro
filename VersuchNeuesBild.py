@@ -1,6 +1,6 @@
 import streamlit as st
 
-items = ['to_eat', 'to_read', 'tree', 'apple']
+items = ['apple', 'to_eat', 'to_read', 'tree']
 
 length = len(items)
 i = 0
