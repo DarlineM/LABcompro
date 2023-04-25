@@ -20,7 +20,7 @@ option = st.multiselect("Choose one",["It is another word for", "It sounds like"
 "Similar in meaning to", "It rhymes with"])
 
 if option == []:
-st.stop()
+  st.stop()
 
 key_dict = {"It is another word for": "rel_syn",
 "It sounds like": "sl",
@@ -28,10 +28,10 @@ key_dict = {"It is another word for": "rel_syn",
 "It rhymes with": "rel_rhy"}
 
 if option:
-key = key_dict[option[0]]
+  key = key_dict[option[0]]
 
 if(key and keyword):
-url= 'https://api.datamuse.com/words?' + key + "=" + keyword
-response = requests.get(url)
-dataFromDatamuse = json.loads(response.text)
-st.write(dataFromDatamuse)
+  url= 'https://api.datamuse.com/words?' + key + "=" + keyword
+  response = requests.get(url)
+  dataFromDatamuse = json.loads(response.text)
+  st.write(dataFromDatamuse)
