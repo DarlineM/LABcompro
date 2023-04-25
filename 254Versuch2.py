@@ -15,6 +15,7 @@ if st.button(label='START'):
 
 #user_input = st.text_input("Enter the word")
 if st.text_input("Enter the word"):
+    user_input = st.text_input("Enter the word")
     if user_input.lower() == str(rand_item):
         st.write("You entered the correct word!")
     else:
