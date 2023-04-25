@@ -4,10 +4,6 @@ from PIL import Image
 import random
 
 
-img = Image.open('images/brainstorm.jpg')
-st.image(img)
-
-
 items = ['to_eat', 'to_read', 'tree', 'apple']
 rand_item = random.choice(items)
 picture = "images/" + rand_item + '.jpg'
