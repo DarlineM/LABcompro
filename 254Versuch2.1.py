@@ -39,3 +39,7 @@ if option:
     user_input2 = st.text_input("Try again now! Enter the word")
     if user_input2.lower() == str(rand_item):
         st.write("Super! Now you entered the correct word!")
+        counter = counter + 1
+        st.write("\n")
+        st.write("\n")
+        st.write("START again)
