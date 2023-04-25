@@ -15,7 +15,7 @@ length = len(items)
 i = 0
 
 while i < length:
-  if st.button(label='START'):
+  if st.button(label='START!'):
     st.header("What do you see on this picture?")
     picture = "images/" + items[i] + '.jpg'
     img = Image.open(picture)
