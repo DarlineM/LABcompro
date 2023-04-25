@@ -3,13 +3,11 @@ import json, requests
 from PIL import Image
 import random
 
-
 items = ['to_eat', 'to_read', 'tree', 'apple']
 rand_item = random.choice(items)
 picture = "images/" + rand_item + '.jpg'
 img = Image.open(picture)
-st.image(img, width = 300)
-
+st.image(img, width=300)
 
 st.write("\n")
 st.write("\n")
