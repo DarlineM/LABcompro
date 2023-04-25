@@ -29,7 +29,7 @@ if user_input.lower() == str(rand_item):
 
 st.write("\n")
 st.write("\n") 
-st.subheader("Here you find help"
+st.subheader("Here you find help")
 st.write("\n")
 st.write("\n")
 option = st.selectbox("Choose a hint", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
