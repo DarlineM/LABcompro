@@ -5,7 +5,7 @@ import random
 
 counter = 0
 items = ['to_eat', 'to_read', 'tree', 'apple']
-rand_item = items[0]
+rand_item = items[counter]
                 
 if st.button(label='START'):
     picture = "images/" + rand_item + '.jpg'
