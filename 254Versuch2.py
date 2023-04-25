@@ -23,3 +23,5 @@ if option:
     response = requests.get(url)
     dataFromDatamuse = json.loads(response.text)
     st.write(dataFromDatamuse)
+    
+st.image(img, width=300, caption='Image for selected item')
