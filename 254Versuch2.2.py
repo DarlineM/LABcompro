@@ -14,13 +14,16 @@ items = ['to_eat', 'to_read', 'tree', 'apple']
 length = len(items)
 i = 0
 
+count = 0
+
 while i < length:
-  if st.button(label='START!', key = "<uniquevalueofsomesort>"):
+  if st.button(label='START!', key = count):
     st.header("What do you see on this picture?")
     picture = "images/" + items[i] + '.jpg'
     img = Image.open(picture)
     st.image(img, width=300)
     st.subheader("You already know the word?")
+    count += 1
 
   user_input = st.text_input("Enter the word")
 
