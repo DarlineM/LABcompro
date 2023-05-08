@@ -6,12 +6,12 @@ import random
 
 items = ['to_eat', 'to_read', 'tree', 'apple']
 rand_item = random.choice(items)
-picture = st.empty()
+pictureX = st.empty()
 
 if st.button(label='START'):
     picture = "images/" + rand_item + '.jpg'
     img = Image.open(picture)
-    picture.image(img, width=300)
+    pictureX.image(img, width=300)
 
 user_input = st.text_input("Enter the word")
 
