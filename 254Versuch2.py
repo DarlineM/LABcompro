@@ -6,7 +6,7 @@ import random
 
 items = ['to_eat', 'to_read', 'tree', 'apple']
 rand_item = random.choice(items)
-pictureX = st.empty()
+#pictureX = st.empty()
 
 if st.button(label='START'):
     picture = "images/" + rand_item + '.jpg'
