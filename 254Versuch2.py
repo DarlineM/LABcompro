@@ -15,15 +15,15 @@ if st.button(label='START'):
     
     user_input = st.text_input("Enter the word")
     
-   # if user_input:
-     #   st.write(user_input)
-    if user_input.lower() == str(rand_item):
-        st.write("You entered the correct word!")
-    else:
-        st.write("Incorrect word. Please try again or get a hint.")
-        st.write("\n")
-        st.write("\n")
-        option = st.selectbox("Choose one for help", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
+    if user_input:
+        st.write(user_input)
+    #if user_input.lower() == str(rand_item):
+       # st.write("You entered the correct word!")
+   # else:
+       # st.write("Incorrect word. Please try again or get a hint.")
+       # st.write("\n")
+       # st.write("\n")
+       # option = st.selectbox("Choose one for help", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
 
           #  if option:
            #      key_dict = {"It is another word for": "rel_syn", "It sounds like": "sl", "Similar in meaning to": "ml", "It rhymes with": "rel_rhy"}
