@@ -11,7 +11,7 @@ rand_item = random.choice(items)
 if st.button(label='START'):
     picture = "images/" + rand_item + '.jpg'
     img = Image.open(picture)
-    pictureX.image(img, width=300)
+    st.image(img, width=300)
     
     user_input = st.text_input("Enter the word")
     
