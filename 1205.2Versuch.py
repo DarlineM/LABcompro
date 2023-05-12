@@ -49,7 +49,7 @@ if user_input:
                 st.write("\n")
                 st.write("Still no idea? Choose another hint!")
                 st.write("\n")
-                user_input2 = st.text_input("Try again now! Enter the word")
+                user_input2 = st.text_input("Or try again now and enter the word")
                 if user_input2:
                     st.write("You entered:",user_input2)
                     if user_input2.lower() == str(rand_item):
