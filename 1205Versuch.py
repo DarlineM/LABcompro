@@ -5,8 +5,13 @@ import random
 
 
 items = ['to_eat', 'to_read', 'tree', 'apple']
-rand_item = random.choice(items)
+#rand_item = random.choice(items)
 #pictureX = st.empty()
+if 'item' not in st.session_state:
+    rand_item = random.choice(items)
+    st.session_state.item = rand_item
+else:
+    rand_item = st.session_state.item
 
 
 if st.button(label='START'):
@@ -14,11 +19,6 @@ if st.button(label='START'):
     img = Image.open(picture)
     st.image(img, width=300)
     
-    if 'item' not in st.session_state:
-      rand_item = random.choice(items)
-      st.session_state.item = rand_item
-    else:
-      rand_item = st.session_state.item
     
     user_input = st.text_input("Enter the word")
     
