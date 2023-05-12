@@ -49,10 +49,12 @@ if user_input:
                 st.write("\n")
                 st.write("\n")
                 user_input2 = st.text_input("Try again now! Enter the word")
-                if user_input2.lower() == str(rand_item):
-                    st.write("Super! Now you entered the correct word!")
-                else:
-                    st.write("Incorrect again. The word was: ", rand_item) 
+                if user_input2:
+                    st.write("You entered:",user_input2)
+                    if user_input2.lower() == str(rand_item):
+                        st.write("Super! Now you entered the correct word!")
+                    else:
+                        st.write("Incorrect again. The word was: ", rand_item) 
 else:
     #st.write("Please enter a word.")
     pass
