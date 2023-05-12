@@ -4,8 +4,8 @@ from PIL import Image
 import random
 
 if st.button("Reload app"):
-        #st.experimental_rerun()
-        st.script_request('reload')
+        st.experimental_rerun(cache_on_button_press=False)
+        
         
 
 st.title("WELCOME TO YOUR APHASIA APP!")
