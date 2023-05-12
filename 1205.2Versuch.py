@@ -30,7 +30,7 @@ if user_input:
     if user_input.lower() == str(rand_item):
         st.write("You entered the correct word!")
     else:
-        st.write("Incorrect word. Please try again or get a hint.")
+        st.write("Unfortunately ths is incorrect. Please try again or get a hint below.")
         st.write("\n")
         st.write("\n")
         option = st.selectbox("Choose one for help", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
