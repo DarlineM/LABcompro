@@ -2,10 +2,6 @@ import streamlit as st
 import json, requests
 from PIL import Image
 import random
-
-if st.button("Reload app"):
-        st.experimental_rerun(cache_on_button_press=False)
-        
         
 
 st.title("WELCOME TO YOUR APHASIA APP!")
@@ -64,3 +60,7 @@ if user_input:
 else:
     #st.write("Please enter a word.")
     pass
+
+if st.button("Reload app"):
+        st.experimental_rerun()
+  
