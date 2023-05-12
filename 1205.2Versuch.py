@@ -3,6 +3,12 @@ import json, requests
 from PIL import Image
 import random
 
+st.title("WELCOME TO YOUR APHASIA APP!")
+st.write("\n")
+st.header("If you want to practice, please press START")
+st.write("\n")
+st.write("\n")
+
 
 items = ['to_eat', 'to_read', 'tree', 'apple']
 if 'item' not in st.session_state:
@@ -11,7 +17,7 @@ if 'item' not in st.session_state:
 else:
     rand_item = st.session_state.item
 
-# Generate the image outside of the button block
+
 picture = "images/" + rand_item + '.jpg'
 img = Image.open(picture)
 st.image(img, width=300)
