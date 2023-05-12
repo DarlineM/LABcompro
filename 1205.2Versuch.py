@@ -5,7 +5,7 @@ import random
 
 st.title("WELCOME TO YOUR APHASIA APP!")
 st.write("\n")
-st.header("If you want to practice, please press START")
+st.header("What do you see on the picture below?")
 st.write("\n")
 st.write("\n")
 
@@ -54,4 +54,5 @@ if user_input:
                 else:
                     st.write("Incorrect again. The word was: ", rand_item) 
 else:
-    st.write("Please enter a word.")
+    #st.write("Please enter a word.")
+    pass
