@@ -47,7 +47,7 @@ if user_input:
                 st.write(dataFromDatamuse[0]["word"])
             
                 st.write("\n")
-                st.write("Still no idea? Choose another hint!"
+                st.write("Still no idea? Choose another hint!")
                 st.write("\n")
                 user_input2 = st.text_input("Try again now! Enter the word")
                 if user_input2:
