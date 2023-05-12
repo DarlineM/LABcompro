@@ -3,8 +3,9 @@ import json, requests
 from PIL import Image
 import random
 
-if st.sidebar.button('Refresh'):
-    st.experimental_rerun()
+if st.button("Reload app"):
+        st.experimental_rerun()
+        
 
 st.title("WELCOME TO YOUR APHASIA APP!")
 st.write("\n")
