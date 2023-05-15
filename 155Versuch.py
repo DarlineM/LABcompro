@@ -1,5 +1,6 @@
 import streamlit as st
 import json, requests
+import random
 from PIL import Image
 from textblob import TextBlob
 
