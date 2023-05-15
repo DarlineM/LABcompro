@@ -1,6 +1,4 @@
-!pip install --upgrade streamlit
 import streamlit as st
-
 import json, requests
 from PIL import Image
 import random
