@@ -58,17 +58,21 @@ if user_input:
                 user_input2 = st.text_input("Or try again now and enter the word")
                 if user_input2:
                     st.write("You entered:",user_input2)
-                    if user_input2.lower() == str(rand_item):
-                        st.write("Super! Now you entered the correct word!")
+                    if user_input.lower() == str(rand_item):
+                        st.write("You entered the correct word!")
                         st.write("\n")
-                    else:
-                        st.write("Incorrect again. The word was: ", rand_item)
-                        blob = TextBlob(user_input2.lower())
+                        blob = TextBlob(user_input.lower())
                         correct_word = blob.correct()
                         if correct_word == rand_item:
-                            st.write("Good job, you spelled the word correctly!")
+                            st.write("Well done, you spelled the word correctly!")
                         else:
-                            st.write("You spelled the word incorrectly. The correct spelling of the word is:", rand_item)
+                            st.write("You spelled the word incorrectly, but it's close! The correct spelling is:", rand_item)
+                    elif TextBlob(user_input.lower()).correct() == str(rand_item):
+                     st.write("Close, but incorrect spelling! The correct spelling is:", rand_item)
+                    else:
+                     st.write("Unfortunately this is incorrect. Please try again or get a hint below.")
+                     st.write("\n")
+                     st.write("\n")
 else:
     pass
 
