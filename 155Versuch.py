@@ -1,15 +1,13 @@
 import streamlit as st
 import json, requests
 from PIL import Image
-import random
-        
+from textblob import TextBlob
 
 st.title("WELCOME TO YOUR APHASIA APP!")
 st.write("\n")
 st.header("What do you see on the picture below?")
 st.write("\n")
 st.write("\n")
-
 
 items = ['to_eat', 'to_read', 'tree', 'apple']
 if 'item' not in st.session_state:
@@ -18,18 +16,23 @@ if 'item' not in st.session_state:
 else:
     rand_item = st.session_state.item
 
-
 picture = "images/" + rand_item + '.jpg'
 img = Image.open(picture)
 st.image(img, width=300)
 
-#if st.button(label='START'):
 user_input = st.text_input("Enter the word")
-    
+
 if user_input:
     st.write("You entered:",user_input)
     if user_input.lower() == str(rand_item):
         st.write("You entered the correct word!")
+        st.write("\n")
+        blob = TextBlob(user_input.lower())
+        correct_word = blob.correct()
+        if correct_word == rand_item:
+            st.write("Well done, you spelled the word correctly!")
+        else:
+            st.write("You spelled the word incorrectly. The correct spelling of the word is:", rand_item)
     else:
         st.write("Unfortunately ths is incorrect. Please try again or get a hint below.")
         st.write("\n")
@@ -46,7 +49,7 @@ if user_input:
                 response = requests.get(url)
                 dataFromDatamuse = json.loads(response.text)
                 st.write(dataFromDatamuse[0]["word"])
-            
+
                 st.write("\n")
                 st.write("Still no idea? Choose another hint!")
                 st.write("\n")
@@ -55,14 +58,18 @@ if user_input:
                     st.write("You entered:",user_input2)
                     if user_input2.lower() == str(rand_item):
                         st.write("Super! Now you entered the correct word!")
+                        st.write("\n")
+                        blob = TextBlob(user_input2.lower())
+                        correct_word = blob.correct()
+                        if correct_word == rand_item:
+                            st.write("Good job, you spelled the word correctly!")
+                        else:
+                            st.write("You spelled the word incorrectly. The correct spelling of the word is:", rand_item)
                     else:
                         st.write("Incorrect again. The word was: ", rand_item) 
 else:
-    #st.write("Please enter a word.")
     pass
 
 if st.button("Reload app"):
   st.experimental_rerun()
-else:
-  pass
         
