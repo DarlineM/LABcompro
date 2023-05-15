@@ -61,14 +61,14 @@ if user_input:
                     if user_input2.lower() == str(rand_item):
                         st.write("Super! Now you entered the correct word!")
                         st.write("\n")
+                    else:
+                        st.write("Incorrect again. The word was: ", rand_item)
                         blob = TextBlob(user_input2.lower())
                         correct_word = blob.correct()
                         if correct_word == rand_item:
                             st.write("Good job, you spelled the word correctly!")
                         else:
                             st.write("You spelled the word incorrectly. The correct spelling of the word is:", rand_item)
-                    else:
-                        st.write("Incorrect again. The word was: ", rand_item) 
 else:
     pass
 
