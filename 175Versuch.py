@@ -2,6 +2,8 @@ import streamlit as st
 import json, requests
 from PIL import Image
 import random
+
+from streamlit import caching
         
 
 st.title("WELCOME TO YOUR APHASIA APP!")
@@ -72,5 +74,5 @@ else:
     pass
 
 if st.button("Reload app"):
-        st.legacy_caching.clear_cache()
+        caching.clear_cache()
         st.experimental_rerun()
