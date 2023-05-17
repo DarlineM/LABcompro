@@ -72,4 +72,5 @@ else:
     pass
 
 if st.button("Reload app"):
+        st.legacy_caching.clear_cache()
         st.experimental_rerun()
