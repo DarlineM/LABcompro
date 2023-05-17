@@ -75,7 +75,7 @@ if st.button("Reload app"):
         caching.clear_cache()
         st.experimental_rerun()
         
-@st.cache(allow_output_mutation=True)
+st.cache(allow_output_mutation=True)
 def mutable_cache():
     return some_list
 
