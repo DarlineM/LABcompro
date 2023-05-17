@@ -72,6 +72,6 @@ else:
     pass
 
 if st.button("Reload app"):
-        caching.clear_cache()
-        st.experimental_rerun()
+     del st.session_state['item']
+
 
