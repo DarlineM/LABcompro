@@ -61,7 +61,7 @@ if user_input:
                         if user_input3:
                           st.write("You entered:",user_input3)
                           if user_input3.lower() == str(rand_item):
-                          st.write("Super! Now you entered the correct word!")
+                                        st.write("Super! Now you entered the correct word!")
                         else:
                           st.write("Incorrect again. The word was: ", rand_item) 
                         
