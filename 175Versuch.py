@@ -74,7 +74,7 @@ else:
 
 if st.button("Reload app"):
      #for key in st.session_state.keys():
-     session.RemoveAll()
+     del st.session_state
      #st.write(st.session_state['item'])   
    
 
