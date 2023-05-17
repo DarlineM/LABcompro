@@ -76,3 +76,12 @@ else:
 if st.button("Reload app"):
         caching.clear_cache()
         st.experimental_rerun()
+        
+@st.cache(allow_output_mutation=True)
+def mutable_cache():
+    return some_list
+
+mutable_object = mutable_cache()
+
+if st.button("Clear history cache"):
+    mutable_object.clear()
