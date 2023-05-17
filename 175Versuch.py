@@ -57,7 +57,7 @@ if user_input:
                         st.write("Super! Now you entered the correct word!")
                     else:
                         st.write("Incorrect again. The word starts with", rand_item[0])
-                        user_inout3 = st.text_input("Last chance, enter the word")
+                        user_input3 = st.text_input("Last chance, enter the word")
                         if user_input3:
                           st.write("You entered:",user_input3)
                           if user_input3.lower() == str(rand_item):
