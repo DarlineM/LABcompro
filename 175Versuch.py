@@ -73,6 +73,7 @@ else:
     pass
 
 if st.button("Reload app"):
-     del st.session_state['item']
+     for key in st.session_state.keys():
+          del st.session_state['item']
 
 
