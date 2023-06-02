@@ -3,25 +3,9 @@ import json, requests
 from PIL import Image
 import random
 
-
-if "page" not in st.session_state:
-    st.session_state.page = 0
-
-def nextpage(): st.session_state.page += 1
-def restart(): st.session_state.page = 0
-
-placeholder = st.empty()
-st.button("Next",on_click=nextpage,disabled=(st.session_state.page > 1))
-
-if st.session_state.page == 0:
-    # Replace the placeholder with some text:
-    placeholder.text(f"Hello, this is page {st.session_state.page}")
-
-else:
-    with placeholder:
-        st.write("This is the end")
-        st.button("Restart",on_click=restart)
-     
+def restart():
+    st.session_state.item = None
+    st.experimental_rerun()
 
 st.title("WELCOME TO YOUR APHASIA APP!")
 st.write("\n")
@@ -29,29 +13,25 @@ st.header("What do you see on the picture below?")
 st.write("\n")
 st.write("\n")
 
-
 items = ['to_eat', 'to_read', 'tree', 'apple']
 if 'item' not in st.session_state:
-    st.write('item')
     rand_item = random.choice(items)
     st.session_state.item = rand_item
 else:
     rand_item = st.session_state.item
 
-
 picture = "images/" + rand_item + '.jpg'
 img = Image.open(picture)
 st.image(img, width=300)
 
-#if st.button(label='START'):
 user_input = st.text_input("Enter the word")
-    
+
 if user_input:
     st.write("You entered:",user_input)
     if user_input.lower() == str(rand_item):
         st.write("You entered the correct word!")
     else:
-        st.write("Unfortunately ths is incorrect. Please try again or get a hint below.")
+        st.write("Unfortunately this is incorrect. Please try again or get a hint below.")
         st.write("\n")
         st.write("\n")
         option = st.selectbox("Choose one for help", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
@@ -66,7 +46,7 @@ if user_input:
                 response = requests.get(url)
                 dataFromDatamuse = json.loads(response.text)
                 st.write(dataFromDatamuse[0]["word"])
-            
+
                 st.write("\n")
                 st.write("Still no idea? Choose another hint!")
                 st.write("\n")
@@ -79,19 +59,11 @@ if user_input:
                         st.write("Incorrect again. The word starts with", rand_item[0])
                         user_input3 = st.text_input("Last chance, enter the word")
                         if user_input3:
-                          st.write("You entered:",user_input3)
-                          if user_input3.lower() == str(rand_item):
-                                        st.write("Super! Now you entered the correct word!")
-                          else:
-                            st.write("Incorrect again. The word was: ", rand_item) 
-                        
-                        
-                        
-else:
-    #st.write("Please enter a word.")
-    pass
+                            st.write("You entered:",user_input3)
+                            if user_input3.lower() == str(rand_item):
+                                st.write("Super! Now you entered the correct word!")
+                            else:
+                                st.write("Incorrect again. The word was: ", rand_item)
 
-if st.button("Reload app"):
-     #for key in st.session_state.keys():
-     del st.session_state
-     #st.write(st.session_state['item'])
+if st.button("Restart"):
+    restart()
