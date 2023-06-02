@@ -72,9 +72,9 @@ else:
     #st.write("Please enter a word.")
     pass
 
-if st.button("Reload app"):
+#if st.button("Reload app"):
      #for key in st.session_state.keys():
-     del st.session_state
+     #del st.session_state
      #st.write(st.session_state['item'])   
    
 
