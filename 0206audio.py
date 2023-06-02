@@ -63,7 +63,7 @@ if user_input:
                           st.write("You entered:",user_input3)
                           if user_input3.lower() == str(rand_item):
                                         st.write("Super! Now you entered the correct word!")
-                                        tts=gTTS(text= rand_item.text, lang='en')
+                                        tts=gTTS(text= rand_item, lang='en')
                                         tts.save('user.mp3')
                                         st.audio('user.mp3')
                           else:
