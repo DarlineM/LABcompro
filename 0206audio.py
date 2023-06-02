@@ -56,6 +56,10 @@ if user_input:
                     st.write("You entered:",user_input2)
                     if user_input2.lower() == str(rand_item):
                         st.write("Super! Now you entered the correct word!")
+                        st.write("Finally, let us speak the word together. Please press the play button below")
+                        tts=gTTS(text= rand_item, lang='en')
+                        tts.save('user.mp3')
+                        st.audio('user.mp3')
                     else:
                         st.write("Incorrect again. The word starts with", rand_item[0])
                         user_input3 = st.text_input("Last chance, enter the word here")
