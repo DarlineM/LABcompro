@@ -73,7 +73,7 @@ if user_input:
                                         st.audio('user.mp3')
                           else:
                             st.write("Unfortunately this is incorrect again. The word was: ", rand_item)
-                            st.write("Nevertheless, let us speak the word togethet. Please press the play button below")
+                            st.write("Nevertheless, let us speak the word together. Please press the play button below")
                             tts=gTTS(text= rand_item, lang='en')
                             tts.save('user.mp3')
                             st.audio('user.mp3')
