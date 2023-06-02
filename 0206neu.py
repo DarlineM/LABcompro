@@ -11,7 +11,7 @@ st.write("\n")
 st.write("\n")
 
 
-items = ['to_eat', 'to_read', 'tree', 'apple']
+items = ['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door']
 if 'item' not in st.session_state:
     st.write('item')
     rand_item = random.choice(items)
