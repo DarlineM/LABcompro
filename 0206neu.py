@@ -13,7 +13,6 @@ st.write("\n")
 
 items = ['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door']
 if 'item' not in st.session_state:
-    st.write('item')
     rand_item = random.choice(items)
     st.session_state.item = rand_item
 else:
@@ -24,7 +23,7 @@ picture = "images/" + rand_item + '.jpg'
 img = Image.open(picture)
 st.image(img, width=300)
 
-#if st.button(label='START'):
+
 user_input = st.text_input("Enter the word")
     
 if user_input:
@@ -69,7 +68,6 @@ if user_input:
                         
                         
 else:
-    #st.write("Please enter a word.")
     pass
 
 #if st.button("Reload app"):
