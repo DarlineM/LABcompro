@@ -43,6 +43,7 @@ elif st.session_state.page == 1:
   if st.session_state.user_input:
     if st.session_state.user_input.lower() == str(st.session_state.rand_item):
       placeholder.header("Well done! You entered the correct word!")
+      st.button("NEXT",on_click=nextpage,disabled=(st.session_state.page > 1))
     else:
       with placeholder.container():
         picture = "images/" + st.session_state.rand_item + '.jpg'
@@ -77,6 +78,7 @@ elif st.session_state.page == 1:
                         tts=gTTS(text= st.session_state.rand_item, lang='en')
                         tts.save('user.mp3')
                         st.audio('user.mp3')
+                        st.button("NEXT",on_click=nextpage,disabled=(st.session_state.page > 1))
                     else:
                         st.write("Unfortunately, this is incorrect again. The word starts with the letter", st.session_state.rand_item[0])
                         st.session_state.user_input3 = st.text_input("This is the last chance, enter the word here")
@@ -88,12 +90,14 @@ elif st.session_state.page == 1:
                                         tts=gTTS(text= st.session_state.rand_item, lang='en')
                                         tts.save('user.mp3')
                                         st.audio('user.mp3')
+                                        st.button("NEXT",on_click=nextpage,disabled=(st.session_state.page > 1))
                           else:
                             st.write("Unfortunately this is incorrect again. The word was: ", st.session_state.rand_item)
                             st.write("Nevertheless, let us speak the word together. Please press the play button below")
                             tts=gTTS(text= st.session_state.rand_item, lang='en')
                             tts.save('user.mp3')
                             st.audio('user.mp3')
+                            st.button("NEXT",on_click=nextpage,disabled=(st.session_state.page > 1))
                         
                         
 
