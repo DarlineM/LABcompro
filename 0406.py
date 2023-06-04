@@ -10,8 +10,8 @@ if "user_input" not in st.session_state:
   st.session_state.user_input = None
 if "rand_item" not in st.session_state:
   st.session_state.rand_item = None
-def nextpage(): st.session_state.page += 1
-#def restart(): st.session_state.page = 0
+def nextpage():
+  st.session_state.page += 1
 def restart():
     st.session_state.page = 0
     st.session_state.rand_item = random.choice(['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door'])
@@ -26,7 +26,6 @@ if st.session_state.page == 0:
     st.session_state.item = st.session_state.rand_item
   else:
     rand_item = st.session_state.item
-    # Replace the placeholder with some text:
   with placeholder.container():
     st.title("WELCOME TO YOUR APHASIA APP!")
     st.write("\n")
