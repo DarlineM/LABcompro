@@ -45,7 +45,8 @@ elif st.session_state.page == 1:
         picture = "images/" + st.session_state.rand_item + '.jpg'
         img = Image.open(picture)
         st.image(img, width=300)
-        st.write("You entered:", st.session_state.user_input,"Unfortunately this is incorrect. Get a hint below.")
+        st.write("You entered:", st.session_state.user_input)
+        st.write("Unfortunately this is incorrect. Get a hint below.")
         st.write("\n")
         st.write("\n")
         option = st.selectbox("Choose one for help", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
