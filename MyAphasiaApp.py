@@ -15,8 +15,8 @@ def restart():
     st.session_state.page = 0
     st.session_state.rand_item = random.choice(['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door'])
 
-#placeholder = st.empty()
-#st.button("NEXT",on_click=nextpage,disabled=(st.session_state.page > 1))
+placeholder = st.empty()
+st.button("NEXT",on_click=nextpage,disabled=(st.session_state.page > 1))
 
 if st.session_state.page == 0:
   items = ['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door']    
@@ -37,8 +37,6 @@ if st.session_state.page == 0:
   st.image(img, width=300)
   st.session_state.user_input = st.text_input("Enter the word and press NEXT")
   
-placeholder = st.empty()
-st.button("NEXT",on_click=nextpage,disabled=(st.session_state.page > 1))
 
 elif st.session_state.page == 1:
   if st.session_state.user_input:
