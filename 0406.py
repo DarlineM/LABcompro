@@ -16,7 +16,7 @@ def restart():
     st.session_state.rand_item = random.choice(['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door'])
 
 placeholder = st.empty()
-st.button("Next",on_click=nextpage,disabled=(st.session_state.page > 3))
+st.button("Next",on_click=nextpage,disabled=(st.session_state.page > 2))
 
 if st.session_state.page == 0:
   items = ['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door']    
