@@ -93,5 +93,5 @@ elif st.session_state.page == 1:
 
 else:
     with placeholder.container():
-        st.write("This is the end")
-        st.button("Restart",on_click=restart)
+        st.header("Well done! You completed this this exercise. If you want to continue practicing, click on the NEW EXERCISE button")
+        st.button("NEW EXERCISE",on_click=restart)
