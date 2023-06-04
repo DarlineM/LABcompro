@@ -51,7 +51,7 @@ elif st.session_state.page == 1:
             key = key_dict[option] if option in key_dict else None
 
             if key:
-                keyword = rand_item
+                keyword = st.session_state.rand_item
                 url = 'https://api.datamuse.com/words?' + key + "=" + keyword
                 response = requests.get(url)
                 dataFromDatamuse = json.loads(response.text)
@@ -63,27 +63,27 @@ elif st.session_state.page == 1:
                 user_input2 = st.text_input("Or try again now and enter the word")
                 if user_input2:
                     st.write("You entered:",user_input2)
-                    if user_input2.lower() == str(rand_item):
+                    if user_input2.lower() == str(st.session_state.rand_item):
                         st.write("Super! Now you entered the correct word!")
                         st.write("Finally, let us speak the word together. Please press the play button below")
-                        tts=gTTS(text= rand_item, lang='en')
+                        tts=gTTS(text= st.session_state.rand_item, lang='en')
                         tts.save('user.mp3')
                         st.audio('user.mp3')
                     else:
-                        st.write("Incorrect again. The word starts with", rand_item[0])
+                        st.write("Incorrect again. The word starts with", st.session_state.rand_item[0])
                         user_input3 = st.text_input("Last chance, enter the word here")
                         if user_input3:
                           st.write("You entered:",user_input3)
-                          if user_input3.lower() == str(rand_item):
+                          if user_input3.lower() == str(st.session_state.rand_item):
                                         st.write("Super! Now you entered the correct word!")
                                         st.write("Finally, let us speak the word together. Please press the play button below")
-                                        tts=gTTS(text= rand_item, lang='en')
+                                        tts=gTTS(text= st.session_state.rand_item, lang='en')
                                         tts.save('user.mp3')
                                         st.audio('user.mp3')
                           else:
-                            st.write("Unfortunately this is incorrect again. The word was: ", rand_item)
+                            st.write("Unfortunately this is incorrect again. The word was: ", st.session_state.rand_item)
                             st.write("Nevertheless, let us speak the word together. Please press the play button below")
-                            tts=gTTS(text= rand_item, lang='en')
+                            tts=gTTS(text= st.session_state.rand_item, lang='en')
                             tts.save('user.mp3')
                             st.audio('user.mp3')
                         
