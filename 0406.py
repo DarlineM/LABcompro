@@ -17,7 +17,7 @@ placeholder = st.empty()
 st.button("Next",on_click=nextpage,disabled=(st.session_state.page > 3))
 
 if st.session_state.page == 0:
-  items = ['to_eat', 'to_read', 'tree', 'apple']    
+  items = ['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door']    
   if 'item' not in st.session_state:
     st.session_state.rand_item = random.choice(items)
     st.session_state.item = st.session_state.rand_item
