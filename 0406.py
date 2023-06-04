@@ -92,6 +92,6 @@ elif st.session_state.page == 1:
 
 
 else:
-    with placeholder:
+    with placeholder.container():
         st.write("This is the end")
         st.button("Restart",on_click=restart)
