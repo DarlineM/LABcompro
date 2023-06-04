@@ -39,13 +39,13 @@ if st.session_state.page == 0:
 elif st.session_state.page == 1:
   if st.session_state.user_input:
     if st.session_state.user_input.lower() == str(st.session_state.rand_item):
-      placeholder.write("You entered the correct word!")
+      placeholder.header("Well done! You entered the correct word!")
     else:
       with placeholder.container():
         picture = "images/" + st.session_state.rand_item + '.jpg'
         img = Image.open(picture)
         st.image(img, width=300)
-        st.write("Unfortunately ths is incorrect. Get a hint below.")
+        st.write("Unfortunately this is incorrect. Get a hint below.")
         st.write("\n")
         st.write("\n")
         option = st.selectbox("Choose one for help", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
@@ -64,7 +64,7 @@ elif st.session_state.page == 1:
                 st.write("\n")
                 st.write("Still no idea? Choose another hint!")
                 st.write("\n")
-                st.session_state.user_input2 = st.text_input("Or try again now and enter the word")
+                st.session_state.user_input2 = st.text_input("Or try again and enter the word")
                 if st.session_state.user_input2:
                     st.write("You entered:",st.session_state.user_input2)
                     if st.session_state.user_input2.lower() == str(st.session_state.rand_item):
@@ -75,7 +75,7 @@ elif st.session_state.page == 1:
                         st.audio('user.mp3')
                     else:
                         st.write("Incorrect again. The word starts with", st.session_state.rand_item[0])
-                        st.session_state.user_input3 = st.text_input("Last chance, enter the word here")
+                        st.session_state.user_input3 = st.text_input("This is the last chance, enter the word here")
                         if st.session_state.user_input3:
                           st.write("You entered:",st.session_state.user_input3)
                           if st.session_state.user_input3.lower() == str(st.session_state.rand_item):
@@ -96,5 +96,5 @@ elif st.session_state.page == 1:
 
 else:
     with placeholder.container():
-        st.header("Well done! You completed this this exercise. If you want to continue practicing, click on the NEW EXERCISE button")
+        st.header("Well done! You completed this exercise. If you want to continue practicing, click on the NEW EXERCISE button")
         st.button("NEW EXERCISE",on_click=restart)
