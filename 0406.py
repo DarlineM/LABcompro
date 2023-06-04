@@ -10,8 +10,7 @@ if "user_input" not in st.session_state:
   st.session_state.user_input = None
 if "rand_item" not in st.session_state:
   st.session_state.rand_item = None
-def nextpage():
-  st.session_state.page += 1
+def nextpage():  st.session_state.page += 1
 def restart():
     st.session_state.page = 0
     st.session_state.rand_item = random.choice(['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door'])
