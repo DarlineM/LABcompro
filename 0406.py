@@ -61,9 +61,9 @@ elif st.session_state.page == 1:
                 st.write("Still no idea? Choose another hint!")
                 st.write("\n")
                 user_input2 = st.text_input("Or try again now and enter the word")
-                if user_input2:
-                    st.write("You entered:",user_input2)
-                    if user_input2.lower() == str(st.session_state.rand_item):
+                if st.session_state.user_input2:
+                    st.write("You entered:",st.session_state.user_input2)
+                    if st.session_state.user_input2.lower() == str(st.session_state.rand_item):
                         st.write("Super! Now you entered the correct word!")
                         st.write("Finally, let us speak the word together. Please press the play button below")
                         tts=gTTS(text= st.session_state.rand_item, lang='en')
@@ -71,10 +71,10 @@ elif st.session_state.page == 1:
                         st.audio('user.mp3')
                     else:
                         st.write("Incorrect again. The word starts with", st.session_state.rand_item[0])
-                        user_input3 = st.text_input("Last chance, enter the word here")
-                        if user_input3:
+                        st.session_state.user_input3 = st.text_input("Last chance, enter the word here")
+                        if st.session_state.user_input3:
                           st.write("You entered:",user_input3)
-                          if user_input3.lower() == str(st.session_state.rand_item):
+                          if st.session_state.user_input3.lower() == str(st.session_state.rand_item):
                                         st.write("Super! Now you entered the correct word!")
                                         st.write("Finally, let us speak the word together. Please press the play button below")
                                         tts=gTTS(text= st.session_state.rand_item, lang='en')
