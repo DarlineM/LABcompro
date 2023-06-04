@@ -16,7 +16,7 @@ def restart():
     st.session_state.rand_item = random.choice(['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door'])
 
 placeholder = st.empty()
-st.button("Next",on_click=nextpage,disabled=(st.session_state.page > 2))
+st.button("Next",on_click=nextpage,disabled=(st.session_state.page > 1))
 
 if st.session_state.page == 0:
   items = ['rabbit', 'car', 'tree', 'apple', 'table', 'tomato', 'door']    
@@ -42,7 +42,7 @@ elif st.session_state.page == 1:
       placeholder.write("You entered the correct word!")
     else:
       with placeholder.container():
-        st.write("Unfortunately ths is incorrect. Please try again or get a hint below.")
+        st.write("Unfortunately ths is incorrect. Get a hint below.")
         st.write("\n")
         st.write("\n")
         option = st.selectbox("Choose one for help", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
